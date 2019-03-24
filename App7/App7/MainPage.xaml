@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App7"
+             x:Class="App7.MainPage">
+
+    
+
+   
+       <Grid RowSpacing="3"><Grid.ColumnDefinitions>
+         <ColumnDefinition Width="1"/>
+         <ColumnDefinition Width="*"/>
+         <ColumnDefinition Width="1" />
+         </Grid.ColumnDefinitions>
+         <Grid.RowDefinitions>
+           <RowDefinition Height="2*" />
+         <RowDefinition Height="3*" />
+         <RowDefinition Height="3*" />
+         <RowDefinition Height="4*" />
+         <RowDefinition Height="1*" />
+         <RowDefinition Height="3*" />
+         </Grid.RowDefinitions>
+        <Label  Text="What time should you clock out?"
+                VerticalTextAlignment="End"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               BackgroundColor="MediumBlue"
+               HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+        <Entry x:Name="ScHrWk" 
+                   MaxLength="2" 
+                   ReturnType="Next" 
+                   Keyboard="Numeric" 
+               Margin="10"
+                   Placeholder="Scheduled hours for the week" FontSize="Medium" Grid.Row="1" Grid.Column="1" />
+            <Entry x:Name="HrSoFar"
+                   MaxLength="5" 
+                   ReturnType="Next" 
+                   Keyboard="Numeric"
+                   Margin="10"
+                   Placeholder="Hours worked so far in decimal" FontSize="Medium" Grid.Row="2" Grid.Column="1" />
+                <Label Text="Time-in today:" FontSize="Default" 
+                   HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="1" />
+                    <TimePicker x:Name="TimeIn" FontSize ="Small" HorizontalOptions="Center" Margin="20" WidthRequest="70" HeightRequest="40" Time="20:00" Grid.Row="3" Grid.Column="1" />
+            <Button x:Name="Calculate"
+        Text="Calculate"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="MediumBlue"
+                    BorderColor="Navy"
+                    BorderWidth="2"
+                    CornerRadius="40"
+                    FontSize="Medium"
+                   
+        Clicked="Calculate_Clicked" Grid.Row="5" Grid.Column="1"  />
+
+        </Grid>
+
+        
+
+        
+</ContentPage>
+
+
+
