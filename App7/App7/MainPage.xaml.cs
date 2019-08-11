@@ -12,6 +12,7 @@ namespace App7
         public MainPage()
         {
             InitializeComponent();
+            TimeIn.Time = DateTime.Now.TimeOfDay;
         }
 
         
@@ -39,9 +40,9 @@ namespace App7
                 double z = (c + y + x);
 
                 // converting 24 hour time to 12 hour
-                if (z > 24)
+                if (z >= 25)
                 { z = z - 24; }
-                else if (z > 12)
+                else if (z >= 13)
                 { z = z - 12; }
 
                 TimeSpan timespan = TimeSpan.FromHours(z);
